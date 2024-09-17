@@ -1,0 +1,5 @@
+# there we'll add differents dependencies, directories, files which we should ignore
+
+# ignore virtual environment
+/.venv
+
