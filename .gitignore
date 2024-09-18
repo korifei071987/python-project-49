@@ -3,3 +3,8 @@
 # ignore virtual environment
 /.venv
 
+# ignore vscode files
+/.vscode
+
+# ignore pycache
+/brain_games/scripts/__pycache__/brain_games.cpython-310.pyc
