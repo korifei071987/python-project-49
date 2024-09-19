@@ -11,3 +11,6 @@ package-install: # installing package from operating system (OS)
 # Game section 
 brain-games: # fast call game 
 	poetry run brain-games 
+# Other
+lint:
+	poetry run flake8 brain_games

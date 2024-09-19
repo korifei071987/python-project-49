@@ -8,3 +8,6 @@
 
 # ignore pycache
 /brain_games/scripts/__pycache__/brain_games.cpython-310.pyc
+
+# ignore setup.cfg (for flake8)
+setup.cfg
