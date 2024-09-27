@@ -3,10 +3,6 @@
 # Import section
 from random import randint
 from brain_games.cli import welcome_user
-from brain_games.hello import greet
-
-greet()
-name = welcome_user()
 
 
 # check even/not even
@@ -25,6 +21,7 @@ def is_valid_answer(answer):
 
 # main game brain_even
 def game_even():
+    name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     count = 0
     while True:

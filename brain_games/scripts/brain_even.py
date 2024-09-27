@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from brain_games.hello import greet
-from brain_games.game import game_even
-from brain_games.cli import welcome_user
+from brain_games.games.game_even import game_even
 # BEGIN
 
 
