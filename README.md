@@ -9,3 +9,6 @@
 
 # Asciinema links(external) brain-even
 [![asciicast](https://asciinema.org/a/hspmgDWgkJctexdWSB8wMnFqq.svg)](https://asciinema.org/a/hspmgDWgkJctexdWSB8wMnFqq)
+
+# Asciinema links(external) brain-gcd
+[![asciicast](https://asciinema.org/a/FssLffoqB7Scc6G04K7jccje0.svg)](https://asciinema.org/a/FssLffoqB7Scc6G04K7jccje0)

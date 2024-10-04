@@ -15,6 +15,8 @@ brain-even: # fast call game even/not even
 	poetry run brain-even
 brain-calc: # fast call game_calc
 	poetry run brain-calc
+brain-gcd: # fast call game_gcd
+	poetry run brain-gcd
 # Other
 lint:
 	poetry run flake8 brain_games
