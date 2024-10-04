@@ -17,6 +17,8 @@ brain-calc: # fast call game_calc
 	poetry run brain-calc
 brain-gcd: # fast call game_gcd
 	poetry run brain-gcd
+brain-progression: # fast call game_progression
+	poetry run brain-progression
 # Other
 lint:
 	poetry run flake8 brain_games
