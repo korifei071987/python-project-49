@@ -31,7 +31,3 @@ def numbers():
     number1 = random.randint(1, 100)
     number2 = random.randint(1, 100)
     return number1, number2
-
-
-
-        

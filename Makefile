@@ -19,6 +19,8 @@ brain-gcd: # fast call game_gcd
 	poetry run brain-gcd
 brain-progression: # fast call game_progression
 	poetry run brain-progression
+brain-prime: # fast call game_prime
+	poetry run brain-prime
 # Other
 lint:
 	poetry run flake8 brain_games
