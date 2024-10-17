@@ -1,11 +1,10 @@
-from brain_games.hello import greet
-from brain_games.games.game_progression import main_progression
+from brain_games.games.game_engine_general import run_game
+from brain_games.games import game_progression
 # BEGIN
 
 
 def main():
-    greet()
-    main_progression()
+    run_game(game_progression)
 
 
 if __name__ == '__main__':

@@ -1,19 +1,11 @@
 # import section
-import random
-import prompt
-from brain_games.games.game_engine_general import welcome_user
-from brain_games.games.game_engine_general import numbers
-from brain_games.games.game_engine_general import correct_answer
-from brain_games.games.game_engine_general import congratulations
-from brain_games.games.game_even import is_valid_answer
-
+from brain_games.games.game_engine_general import get_random_number
 # BEGIN
-# generation one random number
+# Game rules
 
 
-def random_number():
-    number = random.randint(1, 100)
-    return number
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 # valid/ non-valid prime
 
@@ -26,33 +18,21 @@ def is_prime(number):
             count += 1
         devide += 1
     if count >= 3:
-        return False
-    return True
 
-# common game function
+        return 'yes'
+
+    return 'no'
 
 
-def main_prime():
-    count = 0
-    name = welcome_user()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    while True:
-        number = random_number()
-        print('Questuon:', number)
-        answer = prompt.string('Your answer: ')
-        if is_prime(number) == True:
-            result = 'yes'
-        else:
-            result = 'no'
-        if is_valid_answer(answer) is True and correct_answer(result, answer) is True:
-            count += 1
-        else:
-            print(f'{answer} is wrong answer ;(. Correct answer was {result}')
-            print(f"Let's try again, {name}")
-            break
-        if count == 3:
-            congratulations()
-            break
+# common prime function
+
+
+def formulate_question_get_answer():
+    number = get_random_number()
+    question = str(number)
+    correct_answer = is_prime(number)
+
+    return question, str(correct_answer)
 
 
 # END

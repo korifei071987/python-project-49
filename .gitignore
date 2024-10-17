@@ -11,3 +11,9 @@
 
 # ignore setup.cfg (for flake8)
 setup.cfg
+
+# ignore dist
+dist/
+
+# pycache
+__pycache__

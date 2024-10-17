@@ -1,33 +1,54 @@
 import random
 import prompt
 
-
-def greet():
-    print("Welcome to the Brain Games!")
+# Common phrase
 
 
 def welcome_user():
     # User must be input name by defolt
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
+    name = prompt.string("Welcome to the Brain Games!\nMay I have your name? ")
+    print(f"Hello, {name}!")
     return name
+
+# Celebrations
 
 
 def congratulations():
-    print('Congratulations!')
+    print("Congratulations!")
 
 
-# pass/ not pass answer
-def correct_answer(result, answer):
-    if result == answer:
-        print('Correct!')
-        return True
-    return False
-
-# generation random numbers
+# Generation random numbers
 
 
-def numbers():
-    number1 = random.randint(1, 100)
-    number2 = random.randint(1, 100)
-    return number1, number2
+def get_random_number():
+    return random.randint(1, 100)
+
+
+# Rounds
+
+
+MAXIMUM_LEVELS = 3
+
+
+# Game engine
+
+
+def run_game(game_name):
+    name = welcome_user()
+    print(game_name.DESCRIPTION)
+    level = 1
+    while level <= MAXIMUM_LEVELS:
+        question, correct_answer = game_name.formulate_question_get_answer()
+        print(f"Question: {question}")
+        user_answer = prompt.string("Your answer: ")
+        if not (user_answer == correct_answer):
+            print(
+                f"'{user_answer}' is wrong answer ;(. "
+                f"Correct answer was '{correct_answer}'.\n"
+                f"Let's try again, {name}!"
+            )
+            break
+        print("Correct!")
+        level += 1
+    else:
+        congratulations()
