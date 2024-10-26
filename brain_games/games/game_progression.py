@@ -1,7 +1,5 @@
 # import section
 import random
-from brain_games.games.game_engine_general import get_random_number
-# BEGIN
 
 # Game rules
 DESCRIPTION = 'What number is missing in the progression?'
@@ -12,7 +10,7 @@ DESCRIPTION = 'What number is missing in the progression?'
 def progression():
     list_numbers = []
     step = random.randint(1, 10)
-    number = get_random_number()
+    number = random.randint(1, 100)
     list_numbers.append(number)
     for i in range(9):
         list_numbers.append(number + step)
@@ -41,6 +39,3 @@ def formulate_question_get_answer():
     correct_answer = result
 
     return question, str(correct_answer)
-
-
-# END

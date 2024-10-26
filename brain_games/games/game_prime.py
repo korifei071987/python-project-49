@@ -1,15 +1,10 @@
-# import section
-from brain_games.games.game_engine_general import get_random_number
-# BEGIN
+import random
+
 # Game rules
-
-
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 # valid/ non-valid prime
-
-
 def is_prime(number):
     devide = 1
     count = 0
@@ -19,20 +14,15 @@ def is_prime(number):
         devide += 1
     if count >= 3:
 
-        return 'yes'
+        return True
 
-    return 'no'
-
-
-# common prime function
+    return False
 
 
 def formulate_question_get_answer():
-    number = get_random_number()
+    number = random.randint(1, 100)
     question = str(number)
-    correct_answer = is_prime(number)
+    value = is_prime(number)
+    correct_answer = 'yes' if value else 'no'
 
     return question, str(correct_answer)
-
-
-# END

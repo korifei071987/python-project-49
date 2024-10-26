@@ -1,6 +1,5 @@
-from brain_games.games.game_engine_general import run_game
+from brain_games.game_engine_general import run_game
 from brain_games.games import game_gcd
-# BEGIN
 
 
 def main():
@@ -9,6 +8,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# END

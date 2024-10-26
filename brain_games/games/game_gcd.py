@@ -1,14 +1,11 @@
 # import section
-from brain_games.games.game_engine_general import get_random_number
-# BEGIN
+import random
 
 # Game rules
 
 DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 # result of greatest common divisor between two numbers
-
-
 def gcd_result(number1, number2):
     start_number = 1
     max_number = 0
@@ -25,11 +22,8 @@ def gcd_result(number1, number2):
 
 
 def formulate_question_get_answer():
-    number1, number2 = get_random_number(), get_random_number()
+    number1, number2 = random.randint(1, 100), random.randint(1, 100)
     question = f'{number1} {number2}'
     correct_answer = gcd_result(number1, number2)
 
     return question, str(correct_answer)
-
-
-# END

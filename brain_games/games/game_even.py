@@ -1,7 +1,5 @@
-# Import section
-from brain_games.games.game_engine_general import get_random_number
+import random
 
-# BEGIN
 
 # Game rules
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -14,7 +12,7 @@ def is_even(number):
 
 # common even function
 def formulate_question_get_answer():
-    number = get_random_number()
+    number = random.randint(1, 100)
     question = str(number)
     if is_even(number) is True:
         correct_answer = "yes"
@@ -22,6 +20,3 @@ def formulate_question_get_answer():
         correct_answer = "no"
 
     return question, correct_answer
-
-
-# END
