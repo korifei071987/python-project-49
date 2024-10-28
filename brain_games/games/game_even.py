@@ -14,7 +14,7 @@ def is_even(number):
 def formulate_question_get_answer():
     number = random.randint(1, 100)
     question = str(number)
-    if is_even(number) is True:
+    if is_even(number):
         correct_answer = "yes"
     else:
         correct_answer = "no"

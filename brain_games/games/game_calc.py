@@ -6,13 +6,17 @@ OPERATORS = ['+', '-', '*']
 
 
 def question_type(number1, number2, symbol):
-    match symbol:
-        case '+':
-            return number1 + number2
-        case '-':
-            return number1 - number2
-        case '*':
-            return number1 * number2
+    try:
+        match symbol:
+            case '+':
+                return number1 + number2
+            case '-':
+                return number1 - number2
+            case '*':
+                return number1 * number2
+    except (ValueError, SyntaxError):
+        print("Use +, - or * only!")
+        
 
 
 def formulate_question_get_answer():

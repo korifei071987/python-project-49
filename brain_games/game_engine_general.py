@@ -2,11 +2,6 @@ import random
 import prompt
 
 
-# Generation random numbers
-def get_random_number():
-    return random.randint(1, 100)
-
-
 # Rounds
 
 ATTEMPTS_COUNT = 3
@@ -19,7 +14,6 @@ def run_game(game_name):
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
     print(game_name.DESCRIPTION)
-    level = 1
     for i in range(ATTEMPTS_COUNT):
         question, correct_answer = game_name.formulate_question_get_answer()
         print(f"Question: {question}")
@@ -32,6 +26,5 @@ def run_game(game_name):
             )
             break
         print("Correct!")
-        level += 1
     else:
         print("Congratulations!")

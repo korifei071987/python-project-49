@@ -6,17 +6,12 @@ DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 # valid/ non-valid prime
 def is_prime(number):
-    devide = 1
-    count = 0
-    while number >= devide:
-        if number % devide == 0:
-            count += 1
-        devide += 1
-    if count >= 3:
-
-        return True
-
-    return False
+    if number == 1:
+        return False
+    for i in range(2, (number // 2 + 1)):
+        if number % i == 0:
+            return False
+    return True
 
 
 def formulate_question_get_answer():
